@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Author Name,name@example.com"><title>利用Axure+js创建可配置地图页面 · OMINI.BASS</title><meta name="description" content="利用Axure+js创建可配置地图页面
+本文通过Axure+高德自定义地图功能，能够实现在axure中配置相关参数，并最终在预览时实现自定义地图展示的效果。
+
+先看下最终的效果：点击访问
+
+一、实现原理
+高德提供了自定义地图配置功能，并提供了html代码，通过前端工具可以将html转为js格式；
+A"><meta name="keywords" content="Hexo,HTML,CSS,android,Linux"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/OMINIBASS/css/style.css"><link rel="stylesheet" href="/OMINIBASS/css/blog_basic.css"><link rel="stylesheet" href="/OMINIBASS/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/OMINIBASS/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">OMINI.BASS</a></h3><div class="description"><p>Nothing lasts forever.</p></div></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai </a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">Home</a></li><li><a href="/about">Sobre</a></li><li><a href="/archives">Arquivo</a></li><li><a href="/links">Links</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>利用Axure+js创建可配置地图页面</a></h3></div><div class="post-content"><h1 id="利用Axure-js创建可配置地图页面"><a href="#利用Axure-js创建可配置地图页面" class="headerlink" title="利用Axure+js创建可配置地图页面"></a>利用Axure+js创建可配置地图页面</h1><blockquote>
+<p>本文通过Axure+高德自定义地图功能，能够实现在axure中配置相关参数，并最终在预览时实现自定义地图展示的效果。</p>
+</blockquote>
+<p>先看下最终的效果：<a target="_blank" rel="noopener" href="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/demo/demo_%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BC%95%E7%94%A8js/start.html">点击访问</a></p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029145129149.png" alt="最终效果"></p>
+<h2 id="一、实现原理"><a href="#一、实现原理" class="headerlink" title="一、实现原理"></a>一、实现原理</h2><ol>
+<li>高德提供了自定义地图配置功能，并提供了html代码，通过前端工具可以将html转为js格式；</li>
+<li>Axure能够直接调用javascript，通过该功能结合高德转的js，可以实现预览时候展示我们创建的自定义地图；</li>
+<li>高德提供的自定义地图有相当多的参数，通过Axure的局部变量，我们可以将在Axure中配置好的参数传输到js中，最终实现地图样式的自定义配置。</li>
+</ol>
+<p>以下为具体操作步骤</p>
+<h2 id="二、高德地图配置"><a href="#二、高德地图配置" class="headerlink" title="二、高德地图配置"></a>二、高德地图配置</h2><h3 id="2-1-注册高德开发者账号"><a href="#2-1-注册高德开发者账号" class="headerlink" title="2.1 注册高德开发者账号"></a>2.1 注册高德开发者账号</h3><p>进入高德开发者平台（注册地址：<a target="_blank" rel="noopener" href="https://lbs.amap.com/">点击注册</a>）注册完成后，点击控制台进入配置页面；</p>
+<h3 id="2-2-新建应用并获取key"><a href="#2-2-新建应用并获取key" class="headerlink" title="2.2  新建应用并获取key"></a>2.2  新建应用并获取key</h3><p>进入工作台后依次点击<strong>应用管理-我的应用-创建新应用</strong></p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211028223137985.png" alt="创建应用"></p>
+<p>在弹出的对话框中根据要求完善信息，点击<code>新建</code>按钮，即可创建成功</p>
+<p>应用创建成功后，点击应用名称列中的<code>添加</code>按钮，在弹出的对话框中根据要求完善信息，注意：服务平台请选择Web端(JS API)，否则会导致生成的key无法使用。</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211028223300139.png" alt="创建key"></p>
+<p>key添加成功后，在列表中我们就能够看到生成的key，复制下来备用。</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029093157742.png" alt="获取key值"></p>
+<h3 id="2-3-新建自定义地图"><a href="#2-3-新建自定义地图" class="headerlink" title="2.3 新建自定义地图"></a>2.3 新建自定义地图</h3><p>进入高德自定义地图配置页面 <a target="_blank" rel="noopener" href="https://geohub.amap.com/mapstyle/index">点击访问</a>，在页面中可以选择模板进行创建或直接新建，操作后将进入到地图配置页面。</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029094246408.png" alt="创建地图样式"></p>
+<p>在地图的配置页面中，我们能够针对地图中的各项内容进行配置，包括但不限于显示、颜色等等，此处根据自己的需求进行设置即可。在设置完成后，点击<code>发布</code>按钮，地图即可发布成功</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029093815447.png" alt="自定义地图配置"></p>
+<p>地图发布成功后，回到自定义地图管理页，找到配置好的地图卡片，点击<code>分享</code>按钮，在新页面中即可获取到地图的调用地址，复制下来备用</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029093920825.png" alt="image-20211029093920825"></p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029094036611.png" alt="获取调用地址"></p>
+<h3 id="2-4-生成地图html"><a href="#2-4-生成地图html" class="headerlink" title="2.4 生成地图html"></a>2.4 生成地图html</h3><p>进入高德JS API示例页面，<a target="_blank" rel="noopener" href="https://lbs.amap.com/demo/javascript-api/example/personalized-map/custom_style">点击访问</a>，在页面中可以看到高德提供的默认地图样式，页面具体如下分布</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029114352133.png" alt="高德JS API"></p>
+<p>在编辑区中，高德提供了默认的示例代码，将其中的<code>key</code>和<code>地图样式</code>替换为第2步和第3步获取的值后，点击<code>运行</code>按钮，就可以预览到我们创建的自定义地图样式了。</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029114748043.png" alt="替换内容"></p>
+<h3 id="2-5-增加可配置参数"><a href="#2-5-增加可配置参数" class="headerlink" title="2.5 增加可配置参数"></a>2.5 增加可配置参数</h3><blockquote>
+<p>此步骤需要一定的前端经验，但是对于产品经理来说应该不是什么难事</p>
+</blockquote>
+<p>众所周知，高德提供了相当多的参数用来控制地图的展示，这些参数可以在此处获取 <a target="_blank" rel="noopener" href="https://lbs.amap.com/api/javascript-api/reference/map">点击访问</a>，在Map类中都是可以控制地图显示的参数，我们可以根据自己的需求复制对应的参数，添加到第4步中的样式中，格式参考高德提供的示例代码即可。</p>
+<p>如下图，我们在添加了显示模式，是否允许缩放，缩放级别，等内容后，再次点击运行，就可以获取到一个看起来很炫酷的地图模型了。代码放在下面，可根据实际需求进行替换，在替换完成并预览成功后，我们即获得了一个html文件，可以复制下来备用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var map = new AMap.Map(&#x27;container&#x27;, &#123;</span><br><span class="line">resizeEnable: true,</span><br><span class="line"> viewMode: &#x27;3D&#x27;,</span><br><span class="line"> pitch:60,</span><br><span class="line"> showBuildingBlock:true,</span><br><span class="line"> rotation:35,</span><br><span class="line"> zoomEnable:false,</span><br><span class="line"> zoom:18,</span><br><span class="line"> center: [117.19199,34.263464],</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029133510852.png" alt="配置参数"></p>
+<h2 id="三、html转js"><a href="#三、html转js" class="headerlink" title="三、html转js"></a>三、html转js</h2><p>熟悉Axure的同学都知道Axure可以引用js，而html可以转为js格式，通过如下转换工具即可实现互转 <a target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/html_js.aspx">点击访问</a>，在左侧填写我们上一步骤获取的html代码，右侧即可生成我们需要的js了，将代码复制下来备用。</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029115918307.png" alt="html转js"></p>
+<h2 id="四、Axure引用js进行展示"><a href="#四、Axure引用js进行展示" class="headerlink" title="四、Axure引用js进行展示"></a>四、Axure引用js进行展示</h2><p>打开Axure，新建一个页面，在页面中添加一个内联框架并设置其尺寸为所需要的尺寸，此案例中由于需要将地图作为背景设计可视化页面，所以在页面加载中添加配置将内联框架尺寸设置为与窗口大小一致。</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029120248981.png" alt="添加内联框架"></p>
+<p>双击内联框架，配置其链接属性，选择<code>连接到url或文件</code>，点击<code>fx</code>函数配置按钮，在弹出的页面中即可输入在第三步中获取的js代码了，配置完成后点击<code>确定</code>按钮，即配置完成。</p>
+<p><strong>注意：在代码第一行需要添加声明：</strong><code>javascript:</code></p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029120549888.png" alt="配置内联框架"></p>
+<p>配置完成后，按F5进行预览，就能够看到我们配置的效果。</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029133115885.png" alt="预览效果"></p>
+<p>到此步，我们就能够实现基本的地图展示了，但是如果需要修改样式的话，还是需要进行代码层面的调整，然后再重新进行操作，流程复杂。那么借用Axure中的局部变量，Auxre也能够实现参数的传递，从而实现Axure中配置好变量，预览时候就能变化了，以下讲具体操作步骤。</p>
+<h2 id="五、通过表格实现参数传递"><a href="#五、通过表格实现参数传递" class="headerlink" title="五、通过表格实现参数传递"></a>五、通过表格实现参数传递</h2><h3 id="1-添加参数维护表格"><a href="#1-添加参数维护表格" class="headerlink" title="1. 添加参数维护表格"></a>1. 添加参数维护表格</h3><p>在页面中添加一个3列的表格，分别命名为<code>item</code>、<code>value</code>、<code>描述</code>，其中<code>item</code>代表的是参数名称，<code>value</code>代表参数值，<code>描述</code>对应参数描述，方便时间长了忘记参数的意思了，配置完成后讲2.5章节中的参数即参数值配置到表格中，得到下表。</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029133000614.png" alt="参数表格"></p>
+<h3 id="2-参数绑定"><a href="#2-参数绑定" class="headerlink" title="2. 参数绑定"></a>2. 参数绑定</h3><p>对表格中的<code>value</code>列单元格设置单元格名称，建议与<code>item</code>保持一致，方便下一步的操作</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029133025897.png" alt="单元格配置"></p>
+<p>单元格名称配置完成后，进入到内联框架链接编辑页面，先添加一系列局部变量，变量名称与变量名一致，变量值取对应的单元格中的元件文字，如下图对所有可配置的参数添加局部变量。</p>
+<p>局部变量添加完成后，将上方编辑框中写死的值替换为对应的局部变量，保存。</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029125551014.png" alt="参数绑定"></p>
+<p>完成此步后，添加的参数表格内容就与js中的参数进行了绑定，我们可以尝试根据要求对参数值进行修改，如将<code>3D</code>修改为<code>2D</code>，此时再次预览，就可以看到页面根据参数产生了变化。</p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029132839026.png" alt="参数修改"></p>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211029132741895.png" alt="修改后效果"></p>
+<p>最后将参数表格设置为载入后隐藏，预览时候就只展示地图页面了，到此设置完成。</p>
+<h2 id="六、结语"><a href="#六、结语" class="headerlink" title="六、结语"></a>六、结语</h2><p>通过该案例，我们能够大概了解一些前端的开发知识。曾经有一个问题是产品经理需不需要懂开发，个人认为产品经理不一定要写代码，但是要懂得研发的逻辑，而Axure就是一个我们去了解研发逻辑的工具，当那一天研发跟你说这个需求我拒绝的时候，你就可以把原型扔出来，告诉他：</p>
+<blockquote>
+<p>我原型都能画出来，你说代码实现不了？</p>
+</blockquote>
+<p>最后，附上本案例的原型链接：<a target="_blank" rel="noopener" href="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/demo_%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BC%95%E7%94%A8js.rp">点击下载</a></p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-12-07</span><i class="fa fa-tag"></i></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,https://OMINIBASS.github.io/OMINIBASS/2021/12/07/利用Axure创建可配置地图页面/,OMINI.BASS,利用Axure+js创建可配置地图页面,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/OMINIBASS/2021/12/07/%E9%80%9A%E8%BF%87GitHub+Axure%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" title="通过GitHub+Axure创建个人网站">Post Anterior</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/OMINIBASS/2021/12/07/03-CSS%EF%BC%88%E7%AC%AC%E4%B8%80%E5%A4%A9%EF%BC%89/" title="03-CSS（第一天）">Próximo post</a></li></ul></div></div></div></div></div><script src="/OMINIBASS/js/jquery.js"></script><script src="/OMINIBASS/js/jquery-migrate-1.2.1.min.js"></script><script src="/OMINIBASS/js/jquery.appear.js"></script></body></html>

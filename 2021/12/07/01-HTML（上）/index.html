@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Author Name,name@example.com"><title>01-HTML简介（上） · OMINI.BASS</title><meta name="description" content="HTML简介Web标准的构成
+主要包括结构（Structure）、表现（presentation）和行为（behevior）三个方面
+
+
+
+
+标准
+说明
+
+
+
+结构
+结构用于对网页元素进行整理和分类，主要指的是HTML
+
+
+表现
+表现用于设置网页元素的版式、颜色、大小等外观样式，主要指的是CSS
+
+"><meta name="keywords" content="Hexo,HTML,CSS,android,Linux"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/OMINIBASS/css/style.css"><link rel="stylesheet" href="/OMINIBASS/css/blog_basic.css"><link rel="stylesheet" href="/OMINIBASS/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/OMINIBASS/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">OMINI.BASS</a></h3><div class="description"><p>Nothing lasts forever.</p></div></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai </a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">Home</a></li><li><a href="/about">Sobre</a></li><li><a href="/archives">Arquivo</a></li><li><a href="/links">Links</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>01-HTML简介（上）</a></h3></div><div class="post-content"><h1 id="HTML简介"><a href="#HTML简介" class="headerlink" title="HTML简介"></a>HTML简介</h1><h2 id="Web标准的构成"><a href="#Web标准的构成" class="headerlink" title="Web标准的构成"></a>Web标准的构成</h2><ul>
+<li>主要包括结构（Structure）、表现（presentation）和行为（behevior）三个方面</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>标准</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>结构</td>
+<td>结构用于对<strong>网页元素</strong>进行整理和分类，主要指的是HTML</td>
+</tr>
+<tr>
+<td>表现</td>
+<td>表现用于设置网页元素的版式、颜色、大小等<strong>外观样式</strong>，主要指的是CSS</td>
+</tr>
+<tr>
+<td>行为</td>
+<td>行为是指网页模型的定义与<strong>交互</strong>的缩写，主要指的是Javascript</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Web标准提出的最佳体验方案：<strong>结构、样式、行为相分离</strong></li>
+<li>简单理解：结构要写到HTML中，样式写到CSS中，行为写到JS中</li>
+</ul>
+<h2 id="HTML基本结构标签"><a href="#HTML基本结构标签" class="headerlink" title="HTML基本结构标签"></a>HTML基本结构标签</h2><table>
+<thead>
+<tr>
+<th>标签名</th>
+<th>定义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;html&gt;&lt;/html&gt;</code></td>
+<td>HTML标签</td>
+<td>页面中最大的标签，我们称之为<strong>根标签</strong></td>
+</tr>
+<tr>
+<td><code>&lt;head&gt;&lt;/head&gt;</code></td>
+<td>文档的头部</td>
+<td>注意在head标签中我们必须要设置的标签是title</td>
+</tr>
+<tr>
+<td><code>&lt;title&gt;&lt;/title&gt;</code></td>
+<td>文档的标题</td>
+<td>让页面拥有一个属于自己的网页标题</td>
+</tr>
+<tr>
+<td><code>&lt;body&gt;&lt;/body&gt;</code></td>
+<td>文档的主体</td>
+<td>元素包含文档的所有内容，页面内容基本都是放到body中的</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="HTML常用标签"><a href="#HTML常用标签" class="headerlink" title="HTML常用标签"></a>HTML常用标签</h2><h3 id="标题标签"><a href="#标题标签" class="headerlink" title="标题标签"></a>标题标签</h3><ul>
+<li>用法</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一级标题<span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>我是二级标题<span class="tag">&lt;<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>我是三级标题<span class="tag">&lt;<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>我是四级标题<span class="tag">&lt;<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h5</span>&gt;</span>我是五级标题<span class="tag">&lt;<span class="name">h5</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h6</span>&gt;</span>我是六级标题<span class="tag">&lt;<span class="name">h6</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>标签语义：作为标题使用，并且依据重要性递减</li>
+<li>特点<ul>
+<li>加了标题的文字会变得加粗，字号变大</li>
+<li>一个标题独占一行</li>
+</ul>
+</li>
+</ul>
+<h3 id="段落标签"><a href="#段落标签" class="headerlink" title="段落标签"></a>段落标签</h3><ul>
+<li>用法</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;我是一个段落标签&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>单词paragraph的缩写，意为段落</li>
+<li>标签语义：可以把html文档分割为若干<strong>段落</strong></li>
+<li>特点<ul>
+<li>文本在一个段落中会根据浏览器窗口的大小自动换行</li>
+<li>段落与段落之间保有空隙</li>
+</ul>
+</li>
+</ul>
+<h3 id="换行标签"><a href="#换行标签" class="headerlink" title="换行标签"></a>换行标签</h3><ul>
+<li>用法</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;/br&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>单词break的缩写，意味打断，换行</li>
+<li>标签语义：强制换行</li>
+<li>特点<ul>
+<li><code>&lt;/br&gt;</code>是个单标签</li>
+<li><code>&lt;/br&gt;</code>标签只是简单的开始新的一行，跟段落不一样，段落之间会插入一些垂直的距离</li>
+</ul>
+</li>
+</ul>
+<h3 id="文本格式化标签"><a href="#文本格式化标签" class="headerlink" title="文本格式化标签"></a>文本格式化标签</h3><table>
+<thead>
+<tr>
+<th>语义</th>
+<th>标签</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>加粗</strong></td>
+<td><code>&lt;strong&gt;&lt;/strong&gt;</code>或者<code>&lt;b&gt;&lt;/b&gt;</code></td>
+<td>更推荐使用<strong>标签，语义更强烈</td>
+</tr>
+<tr>
+<td><strong>倾斜</strong></td>
+<td><code>&lt;em&gt;&lt;/em&gt;</code>或者<code>&lt;i&gt;&lt;/i&gt;</code></td>
+<td>更推荐使用<em>标签，语义更强烈</td>
+</tr>
+<tr>
+<td>删除线</td>
+<td><code>&lt;del&gt;&lt;/del&gt;</code>或者<code>&lt;s&gt;&lt;/s&gt;</code></td>
+<td>更推荐使用<del>标签，语义更强烈</td>
+</tr>
+<tr>
+<td>下划线</td>
+<td><code>&lt;ins&gt;&lt;/ins&gt;</code>或者<code>&lt;u&gt;&lt;/u&gt;</code></td>
+<td>更推荐使用<ins>标签，语义更强烈</td>
+</tr>
+</tbody></table>
+<p>标签语义：突出重要性，比普通文字更加重要</p>
+<h3 id="div和span标签"><a href="#div和span标签" class="headerlink" title="div和span标签"></a>div和span标签</h3><ul>
+<li>用法</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>这是头部<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>今日价格<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>标签语义<ul>
+<li>div是division的缩写，表示分割，分区</li>
+<li>span意为跨度、跨距</li>
+</ul>
+</li>
+<li>特点<ul>
+<li><code>&lt;div&gt;</code>标签用来布局，但是一行智能放一个<code>&lt;div&gt;</code>。 <strong>大盒子</strong></li>
+<li><code>&lt;span&gt;</code>标签用来布局，一行上可以放多个<code>&lt;span&gt;</code>。 <strong>小盒子</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="图像标签用法"><a href="#图像标签用法" class="headerlink" title="图像标签用法"></a>图像标签用法</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;图像url&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>img是单词image的缩写，意为图像</li>
+<li>src是<code>&lt;img&gt;</code>的<strong>必须属性</strong>，它用于<strong>指定图像文件的路径和文件名</strong>。</li>
+<li>所谓属性：简单解释就是属于这个图像标签的特性</li>
+<li>图像标签的其他属性：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>src</td>
+<td>图片路径</td>
+<td>必须属性</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>文本</td>
+<td>替换文本，图片不能正常显示时显示该文本</td>
+</tr>
+<tr>
+<td>title</td>
+<td>文本</td>
+<td>提示文本，鼠标放到图像上时候悬浮显示</td>
+</tr>
+<tr>
+<td>width</td>
+<td>像素</td>
+<td>设置图像的宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>像素</td>
+<td>设置图像的高度</td>
+</tr>
+<tr>
+<td>border</td>
+<td>像素</td>
+<td>设置图像的边框宽度</td>
+</tr>
+</tbody></table>
+<h3 id="路径用法"><a href="#路径用法" class="headerlink" title="路径用法"></a>路径用法</h3><h4 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h4><ul>
+<li>相对路径：以<strong>引用文件所在位置</strong>为参考基础，而建立出的目录路径</li>
+<li>简单来说：<strong>图片相对于HTML页面的位置</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>相对路径分类</th>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>同一级路径</td>
+<td></td>
+<td>图像文件位于HTML文件同一级，如<code>&lt;img src=&quot;baidu.gif&quot;&gt;</code></td>
+</tr>
+<tr>
+<td>下一级路径</td>
+<td>/</td>
+<td>图像文件位于HTML文件下一级，如<code>&lt;img src=&quot;img/baidu.gif&quot;&gt;</code></td>
+</tr>
+<tr>
+<td>上一级路径</td>
+<td>../</td>
+<td>图像文件位于HTML文件上一级，如<code>&lt;img src=&quot;../baidu.gif&quot;&gt;</code></td>
+</tr>
+</tbody></table>
+<h4 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h4><ul>
+<li>绝对路径：是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径</li>
+<li>例如：”D:\web\img\loogo.gif”或完整的网络地址：htttp://<a target="_blank" rel="noopener" href="http://www.itcast.cn/images/logo.gif">www.itcast.cn/images/logo.gif</a></li>
+</ul>
+<h3 id="超链接标签"><a href="#超链接标签" class="headerlink" title="超链接标签"></a>超链接标签</h3><h4 id="链接的语法格式"><a href="#链接的语法格式" class="headerlink" title="链接的语法格式"></a>链接的语法格式</h4><ul>
+<li><p>在HTML标签中，<code>&lt;a&gt;</code>标签用于定义<strong>超链接</strong>，作用是从一个页面链接到另一个页面</p>
+</li>
+<li><p>用法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;跳转目标&quot;</span> <span class="attr">target</span>=<span class="string">&quot;目标窗口的弹出方式&quot;</span>&gt;</span>文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>&lt;a&gt;</code>的单词为anchor，意为“锚”</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>href</td>
+<td>用于指定链接目标的url地址，（必须属性）当为标签应用href属性时，它就有了超链接的功能</td>
+</tr>
+<tr>
+<td>target</td>
+<td>用于指定链接页面的打开方式，其中<code>_self</code>为默认值，<code>_blank</code>为在新窗口中打开</td>
+</tr>
+</tbody></table>
+<h4 id="链接分类"><a href="#链接分类" class="headerlink" title="链接分类"></a>链接分类</h4><table>
+<thead>
+<tr>
+<th>链接类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>外部链接</td>
+<td>例如 &lt; a href=”http:// <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a><a target="_blank" rel="noopener" href="http://www.baidu.com/"> </a>“&gt; 百度</a >。</td>
+</tr>
+<tr>
+<td>内部链接</td>
+<td>网站内部页面之间的相互链接. 直接链接内部页面名称即可，例如 &lt; a href=”index.html”&gt; 首页 </a >。</td>
+</tr>
+<tr>
+<td>空链接</td>
+<td>如果当时没有确定链接目标时，&lt; a href=”#”&gt; 首页 </a > 。</td>
+</tr>
+<tr>
+<td>下载链接</td>
+<td>如果 href 里面地址是一个文件或者压缩包，会下载这个文件。</td>
+</tr>
+<tr>
+<td>网页元素链接</td>
+<td>在网页中的各种网页元素，如文本、图像、表格、音频、视频等都可以添加超链接</td>
+</tr>
+<tr>
+<td>锚点链接</td>
+<td>锚点链接: 点我们点击链接,可以快速定位到页面中的某个位置。</td>
+</tr>
+<tr>
+<td>锚点链接</td>
+<td>在链接文本的 href 属性中，设置属性值为 #名字 的形式，如<code>&lt;a href=&quot;#two&quot;&gt; 第2集 &lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>锚点链接</td>
+<td>找到目标位置标签，里面添加一个 id 属性 = 刚才的名字 ，如：<code>&lt;h3 id=&quot;two&quot;&gt;第2集介绍&lt;/h3&gt;</code></td>
+</tr>
+</tbody></table>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ul>
+<li>html中的中的注释以<strong>“<!--”开头，以“ -->”</strong>结束。</li>
+<li>用法：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 注释语句 --&gt;</span>	快捷键: ctrl +	/</span><br></pre></td></tr></table></figure>
+
+<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><ul>
+<li>重点记住空格、大于号、小于号这三个即可（MD中也是这个）</li>
+</ul>
+<p><img src="https://image-pifw.oss-cn-hangzhou.aliyuncs.com/image-20211203161730650.png" alt="image-20211203161730650"></p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-12-07</span><i class="fa fa-tag"></i></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,https://OMINIBASS.github.io/OMINIBASS/2021/12/07/01-HTML（上）/,OMINI.BASS,01-HTML简介（上）,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/OMINIBASS/2021/12/07/02-HTML%EF%BC%88%E4%B8%8B%EF%BC%89/" title="02-HTML（下）">Post Anterior</a></li></ul></div></div></div></div></div><script src="/OMINIBASS/js/jquery.js"></script><script src="/OMINIBASS/js/jquery-migrate-1.2.1.min.js"></script><script src="/OMINIBASS/js/jquery.appear.js"></script></body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Author Name,name@example.com"><title>通过GitHub+Axure创建个人网站 · OMINI.BASS</title><meta name="description" content="通过GitHub+Axure创建个人网站
+本文将介绍一种不需要开发，且无成本的个人网站部署方式，希望大家能通过本文创建自己的个人网站。
+
+众所周知，如果想要创建一个属于自己的个人网站，能够外网访问并拥有自己的域名，那么至少需要有以下几方面的知识储备：
+
+一定的编程能力，能够根据自己的想法编写自己的网"><meta name="keywords" content="Hexo,HTML,CSS,android,Linux"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/OMINIBASS/css/style.css"><link rel="stylesheet" href="/OMINIBASS/css/blog_basic.css"><link rel="stylesheet" href="/OMINIBASS/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/OMINIBASS/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">OMINI.BASS</a></h3><div class="description"><p>Nothing lasts forever.</p></div></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai </a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">Home</a></li><li><a href="/about">Sobre</a></li><li><a href="/archives">Arquivo</a></li><li><a href="/links">Links</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>通过GitHub+Axure创建个人网站</a></h3></div><div class="post-content"><h1 id="通过GitHub-Axure创建个人网站"><a href="#通过GitHub-Axure创建个人网站" class="headerlink" title="通过GitHub+Axure创建个人网站"></a>通过GitHub+Axure创建个人网站</h1><blockquote>
+<p>本文将介绍一种不需要开发，且无成本的个人网站部署方式，希望大家能通过本文创建自己的个人网站。</p>
+</blockquote>
+<p>众所周知，如果想要创建一个属于自己的个人网站，能够外网访问并拥有自己的域名，那么至少需要有以下几方面的知识储备：</p>
+<ul>
+<li>一定的编程能力，能够根据自己的想法编写自己的网站</li>
+<li>熟悉网站部署，能够在服务器上部署自己的网站</li>
+<li>具备一些服务器维护的知识，能够将内网IP映射到外网</li>
+</ul>
+<p>当然除了技术之外，每年还需要租用服务器和域名，最基本的大概就是小千把块钱一年了。</p>
+<p>那么作为一个穷逼非技术产品经理，是否有一个方便且省钱的方法能够创建我们的个人网站，展示自己的能力和作品呢？本文将介绍通过axure+GitHub的形式，来达成我们目的的一种方法。</p>
+<p>先看下最终效果：<a href="https://ominibass.github.io/">https://ominibass.github.io/</a></p>
+<h2 id="通过Axure创建个人网站"><a href="#通过Axure创建个人网站" class="headerlink" title="通过Axure创建个人网站"></a>通过Axure创建个人网站</h2><p>在教程开始前，先来了解下通过Axure创建个人网站时候需要注意的几个点：</p>
+<ol>
+<li>注意自适应：尽量通过动态面板的100%宽度及固定位置的功能实现多分辨率下页面的显示效果统一；</li>
+<li>少用图片：由于GitHub服务器在国外，所以图片加载速度会比较感人；</li>
+<li>适当使用中继器，能够保证页面中元素的整齐划一，保证页面的美观性；</li>
+<li>Axure由于不支持数据库，因此网站更新需要重新在Axure中编辑后生成html文件进行更新。</li>
+</ol>
+<p>这部分的内容不过多的赘述，具体可以参考@时光若刻的文章：<a target="_blank" rel="noopener" href="http://www.woshipm.com/rp/941478.html">不会编程？Axure一样可以做网站 By @时光若刻</a></p>
+<p>或者下载这里已经为大家准备好的原型模板，希望能够帮助大家快速的创建自己的个人网站：<a target="_blank" rel="noopener" href="http://www.pmdaniu.com/rp/detail/102118">点击下载</a></p>
+<h2 id="2-生成个人网站所需的html"><a href="#2-生成个人网站所需的html" class="headerlink" title="2. 生成个人网站所需的html"></a>2. 生成个人网站所需的html</h2><blockquote>
+<p>由于axure正常生成的html是带有侧边栏的，作为个人网站来说并不合适，以下将介绍如何生成没有侧边栏的html；</p>
+</blockquote>
+<p>以上方的模板原型为例：</p>
+<p>（1）将页面中的第一个页面名称设置为index，其余的页面不需要进行修改；<img src="http://image.woshipm.com/wp-files/2019/09/QORppFDY6ozAfX9mBFq3.png" alt="img">（2）通过F8或菜单栏“发布-生成html”文件，生成个人网站html文件夹，配置不需要做修改，记住生成文件夹的位置；<img src="http://image.woshipm.com/wp-files/2019/09/MhmopEOBzkmDWrZ8f7Jf.png" alt="img">（3）打开原型生成的的HTML文件夹，然后删除所有start开头的文件；<img src="http://image.woshipm.com/wp-files/2019/09/bAUQ7EK5oTjTkemOR58V.png" alt="img"></p>
+<p>至此，需要通过Axure完成的操作已经完成，接下来将介绍GitHub相关的操作。</p>
+<h2 id="3-注册GitHub账号并下载客户端"><a href="#3-注册GitHub账号并下载客户端" class="headerlink" title="3. 注册GitHub账号并下载客户端"></a>3. 注册GitHub账号并下载客户端</h2><blockquote>
+<p>GitHub其实支持通过命令行的形式进行操作，但考虑到大部分同学没有git指令基础，所以此处采用GitHub客户端进行操作，更加的方便快捷，如果有git指令基础的同学也可以尝试直接用命令行来进行操作。</p>
+</blockquote>
+<p>（1）进入Github网站：<a target="_blank" rel="noopener" href="https://github.com/%EF%BC%8C%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E8%B4%A6%E5%8F%B7%EF%BC%8C%E8%AE%B0%E4%BD%8F%E8%87%AA%E5%B7%B1%E7%9A%84Username%EF%BC%8C%E5%9C%A8%E5%90%8E%E9%9D%A2%E4%BC%9A%E7%94%A8%E5%88%B0%EF%BC%9B![img](http://image.woshipm.com/wp-files/2019/09/9amnkL4UrW7UTnHKJ8y8.png)%EF%BC%882%EF%BC%89%E4%B8%8B%E8%BD%BDGithub%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B9%B6%E5%AE%89%E8%A3%85%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%EF%BC%9Ahttps://desktop.github.com/![img](http://image.woshipm.com/wp-files/2019/09/YSN1FJKd4Rim4sTZ5Ro7.png)">https://github.com/，注册一个自己的账号，记住自己的Username，在后面会用到；![img](http://image.woshipm.com/wp-files/2019/09/9amnkL4UrW7UTnHKJ8y8.png)（2）下载Github客户端并安装，下载地址：https://desktop.github.com/![img](http://image.woshipm.com/wp-files/2019/09/YSN1FJKd4Rim4sTZ5Ro7.png)</a></p>
+<h2 id="4-创建仓库并上传html"><a href="#4-创建仓库并上传html" class="headerlink" title="4. 创建仓库并上传html"></a>4. 创建仓库并上传html</h2><blockquote>
+<p>本段将介绍通过GitHub客户端创建仓库并上传html，配置完成后即可获得自己的个人网站。</p>
+</blockquote>
+<p>（1）GitHub客户端安装完成后，进入程序，输入自己的账号登录；</p>
+<p>（2）点击程序菜单栏File，在下拉框中选择：New repository；<img src="http://image.woshipm.com/wp-files/2019/09/a5LZyR0PpR2GvTNYsnez.png" alt="img">（3）在弹出的窗口中完善仓库相关信息，需要填写的内容如下：</p>
+<p>Name（仓库名）：填写Username.github.io</p>
+<p>Local path（本地路径）：本地存放html的位置，修改后需要记住，后面需要用。</p>
+<p>其他内容默认即可，不需要进行配置，所有内容填写完成后，点击“Create repository”创建一个仓库。</p>
+<p><img src="http://image.woshipm.com/wp-files/2019/09/Vi1G9lr7H6yTmkzEF7c5.png" alt="img"></p>
+<p>（4）创建成功后，在资源管理器中打开Local path的路径，如果没问题的话会看到一个以Name命名的文件夹</p>
+<p><img src="http://image.woshipm.com/wp-files/2019/09/R3KJr0wdgMOw5XpDtybP.png" alt="img"></p>
+<p>（5）进入文件夹，将第二步中生成的html全部拷贝过来。</p>
+<p><img src="http://image.woshipm.com/wp-files/2019/09/4OmLI8eqDBetGh6LzbsO.png" alt="img"></p>
+<p>（6）回到GitHub客户端，会发现左侧的变更历史中出现了许多的内容。完善左下角的修改总结和描述后，点击下方“Commin to master”提交代码。</p>
+<p><img src="http://image.woshipm.com/wp-files/2019/09/dTXfyKmPq8QvOTyPKwjV.png" alt="img"></p>
+<p>（7）提交完成后，点击页面中上部的“Publish repository”，在弹出的对话框中将“keep thiscode private”前的复选框取消选中，点击“Publish repository”提交。<img src="http://image.woshipm.com/wp-files/2019/09/eFrFCvrJ1WILAIotQU6D.png" alt="img"></p>
+<p><img src="http://image.woshipm.com/wp-files/2019/09/lk3iBQYTazEn20puTA0e.png" alt="img"></p>
+<p>（8）打开浏览器，输入Username.github.io，即可访问你的主页。</p>
+<p>至此，你就拥有了属于自己的个人网站了，可以分享起来了~</p>
+<h2 id="5-网站更新"><a href="#5-网站更新" class="headerlink" title="5. 网站更新"></a>5. 网站更新</h2><p>网站更新的操作步骤与部署基本一致，依然是通过Axure生成html，删除无关文件并更新仓库来完成。此处不过多赘述。</p>
+<h2 id="6-鸣谢"><a href="#6-鸣谢" class="headerlink" title="6. 鸣谢"></a>6. 鸣谢</h2><p>感谢<a target="_blank" rel="noopener" href="http://www.woshipm.com/u/55654">@时光若刻</a> 提供的关于网站设计的帮助。</p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-12-07</span><i class="fa fa-tag"></i></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,https://OMINIBASS.github.io/OMINIBASS/2021/12/07/通过GitHub+Axure创建个人网站/,OMINI.BASS,通过GitHub+Axure创建个人网站,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/OMINIBASS/2021/12/07/%E5%88%A9%E7%94%A8Axure%E5%88%9B%E5%BB%BA%E5%8F%AF%E9%85%8D%E7%BD%AE%E5%9C%B0%E5%9B%BE%E9%A1%B5%E9%9D%A2/" title="利用Axure+js创建可配置地图页面">Próximo post</a></li></ul></div></div></div></div></div><script src="/OMINIBASS/js/jquery.js"></script><script src="/OMINIBASS/js/jquery-migrate-1.2.1.min.js"></script><script src="/OMINIBASS/js/jquery.appear.js"></script></body></html>
